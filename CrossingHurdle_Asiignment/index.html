@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp-like Chat Interface</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="chat-container" id="main-box">
+    <div class="chat-header">WhatsApp Chat</div>
+    <div class="chat-messages" id="chat-messages">
+      <!-- Messages will be displayed here -->
+      <div class="message user-message">Hey, how's it going?</div>
+      <div class="message other-message">Hi there! I'm doing great, thanks for asking.</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="pay">&#8377;</button>
+      <button id="market-place" style="display: none;">M</button>
+      <button id="send-button">&#10148;</button>
+    </div>
+  </div>
+
+  <!-- Floating window for market content -->
+  <div id="floating-window">
+    <div id="floating-content">
+      <!-- Add your market content here -->
+      <p>This is the market content. You can add more text here...</p>
+      <h2>Item Set</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Cost</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="item-list">
+          <!-- Existing items will be added here -->
+        </tbody>
+      </table>
+    
+      <!-- Form to add new items -->
+      <form id="add-item-form">
+        <h3>Add New Item</h3>
+        <label for="item-name">Item Name:</label>
+        <input type="text" id="item-name" name="item-name" required><br>
+        <label for="item-cost">Cost:</label>
+        <input type="number" id="item-cost" name="item-cost" required><br>
+        <label for="item-quantity">Quantity:</label>
+        <input type="number" id="item-quantity" name="item-quantity" required><br>
+        <button type="submit">Add Item</button>
+      </form>
+    </div>
+    </div>
+    <div id="sold-content">
+        <!-- Sold items and timestamps will be displayed here -->
+        <h2>Items Sold</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Quantity Sold</th>
+              <th>Sold At</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="sold-list">
+            <!-- Sold items will be added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="/scrip.js"></script>
+</body>
+</html>
